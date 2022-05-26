@@ -14,7 +14,14 @@ The end product will be written completely in C or will be a Cython compiled ver
 
 ### Join In!
 
-I am currently looking for people to collaborate with. 
+I am currently looking for people to collaborate with on:
+
+- Writing documentation and wiki
+- Implementing syntax features
+- Developing libraries and a package system
+- Literally anything else
+ 
+Contact info is in github bio.
 
 ### To Do:
 
@@ -23,3 +30,4 @@ I am currently looking for people to collaborate with.
 - [ ] Implement Logic Arithmetic
 - [ ] Implement if/then
 - [ ] Implement labels and goto to enable looping and recursive code when paired with if/then
+- Adding more soon
