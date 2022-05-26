@@ -41,7 +41,9 @@ def declareNum(line):
         varDict[x] = (g.vars[a])[2]
 
     newValue = parser.parse(expression).evaluate(varDict)
-    if not(type(newValue)) in acceptable:
+    if type(newValue) == 'Float': (g.vars[len(g.vars) - 1])[1] = 'float'
+    if type(newValue) == 'Int': (g.vars[len(g.vars) - 1])[1] = 'integer'
+    if not(g.vars[len(g.vars) - 1])[1] in acceptable:
         eh.declarationNonNumerical(loc)
     (g.vars[len(g.vars) - 1])[2] = newValue
     for x in g.vars:
