@@ -15,6 +15,7 @@ I am currently looking for people to collaborate with.
 
 ### To Do:
 
+- [ ] Implement Numeric Arithmetic
 - [ ] Implement Logic Arithmetic
 - [ ] Implement if/then
 - [ ] Implement labels and goto to enable looping and recursive code when paired with if/then
