@@ -1,6 +1,7 @@
 # Pinewood Programming Language
 [![OSS Status: Healthy](https://img.shields.io/badge/OSS%20Status-Healthy-darkgreen.svg)](OSS_STATUS.md)
 ![GitHub issues](https://img.shields.io/github/issues-raw/stevenrakhmanchik/Pinewood-Programming-Language)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/stevenrakhmanchik/Pinewood-Programming-Language)
 
 This is quite obviously a work in progress :)
 
