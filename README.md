@@ -3,8 +3,6 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/stevenrakhmanchik/Pinewood-Programming-Language)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/stevenrakhmanchik/Pinewood-Programming-Language)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/stevenrakhmanchik/Pinewood-Programming-Language?style=social)
-
 This is quite obviously a work in progress :)
 
 ### Goals:
