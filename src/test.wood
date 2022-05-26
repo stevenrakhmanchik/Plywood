@@ -1,0 +1,4 @@
+# Pinewood Program to convert radians to degrees
+
+round(log(2.7)) -> radians
+radians * 180 * PI -> degrees

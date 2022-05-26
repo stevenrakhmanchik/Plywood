@@ -9,7 +9,20 @@
 import sys
 import os.path
 import errorhandler as eh
+import declare
+import g
+from py_expression_eval import Parser
 
+def mainLoop(woodFile):
+    for line in g.lines:
+        line_lex = line.split(' ')
+        if '->' in line:
+            declare.declareNum(line)
+
+
+
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 if (len(sys.argv)) != 2:
     eh.noFileArg()
 else:
@@ -20,7 +33,11 @@ else:
         if os.path.exists(woodFile) == False:
             eh.noWoodFileExist()
         else:
-            mainLoop()
+            file = open(woodFile, "r")
+            g.lines = [(line.rstrip('\n')) for line in file]
+            file.close()
 
-def mainLoop():
-    
+            g.vars = []
+            g.varNames = []
+
+            mainLoop(woodFile)
