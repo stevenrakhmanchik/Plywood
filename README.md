@@ -16,6 +16,7 @@ The end product will be written completely in C or will be a Cython compiled ver
 
 I am currently looking for people to collaborate with on:
 
+- Creating syntax highlighting and grammar rules via Tree-sitter for code editors to recognize Plywood (High Priority)
 - Writing documentation and wiki
 - Implementing syntax features
 - Developing libraries and a package system
