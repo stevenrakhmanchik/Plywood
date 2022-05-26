@@ -1,10 +1,10 @@
 # Plywood Programming Language
-   ___ _                               _ 
-  / _ \ |_   ___      _____   ___   __| |
- / /_)/ | | | \ \ /\ / / _ \ / _ \ / _` |
-/ ___/| | |_| |\ V  V / (_) | (_) | (_| |
-\/    |_|\__, | \_/\_/ \___/ \___/ \__,_|
-         |___/                           
+   ___ _                               _ <br>
+  / _ \ |_   ___      _____   ___   __| |<br>
+ / /_)/ | | | \ \ /\ / / _ \ / _ \ / _` |<br>
+/ ___/| | |_| |\ V  V / (_) | (_) | (_| |<br>
+\/    |_|\__, | \_/\_/ \___/ \___/ \__,_|<br>
+         |___/                           <br>
    
 [![OSS Status: Healthy](https://img.shields.io/badge/OSS%20Status-Healthy-darkgreen.svg)](OSS_STATUS.md)
 ![GitHub issues](https://img.shields.io/github/issues-raw/stevenrakhmanchik/Pinewood-Programming-Language)
