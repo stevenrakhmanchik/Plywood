@@ -1,9 +1,4 @@
-# Plywood Programming Language
-  ___ _                          _ 
- | _ \ |_  ___ __ _____  ___  __| |
- |  _/ | || \ V  V / _ \/ _ \/ _` |
- |_| |_|\_, |\_/\_/\___/\___/\__,_|
-        |__/                        
+# Plywood Programming Language           
    
 [![OSS Status: Healthy](https://img.shields.io/badge/OSS%20Status-Healthy-darkgreen.svg)](OSS_STATUS.md)
 ![GitHub issues](https://img.shields.io/github/issues-raw/stevenrakhmanchik/Pinewood-Programming-Language)
