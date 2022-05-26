@@ -1,4 +1,11 @@
-# Pinewood Program to convert radians to degrees
+# Pinewood Program to convert radians to degrees and print the output
+# Steven Rakhmanchik 2022
 
-180/6 -> radians
+PI/6 -> radians
+out "Radians: " $ radians $ "\n"
+0 -> degrees
 radians * 180 * PI -> degrees
+out "Degrees: " $ degrees $ "\n"
+round(degrees) -> degrees
+out "Degrees Rounded: " $ degrees $ "\n"
+out radians * 180 * PI $ "\n"

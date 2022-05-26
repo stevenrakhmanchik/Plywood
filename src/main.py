@@ -10,16 +10,19 @@ import sys
 import os.path
 import errorhandler as eh
 import declare
+import output
 import g
-from py_expression_eval import Parser
 
 def mainLoop(woodFile):
     for line in g.lines:
         line_lex = line.split(' ')
         if '->' in line:
             declare.declareNum(line)
-
-
+        if line_lex[0] == 'out':
+            line = line[3:len(line)]
+            output.out(line)
+        if '=>' in line:
+            declar.declareNonNum(line)
 
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––

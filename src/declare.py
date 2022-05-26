@@ -4,47 +4,41 @@ import g
 
 def declareNum(line):
     parser = Parser()
-    acceptable = ('integer','float','numerical')
-    banned = ('PI','pi')
+    acceptable = ('integer','float','numerical', 'string')
+    banned = ()
     line_lex = line.split('->')
     loc = eh.getLine(line) + 1
-
     expression = line_lex[0]
     varName = line_lex[1].strip()
-
     if len(line_lex) > 2:
         eh.multiDeclare(loc)
     if varName.isalpha() == False:
         eh.invalidVarName(loc)
-
     if varName in g.varNames and not(varName in banned):
         a = g.varNames.index(varName)
-        varType = g.vars[a]
+        varType = g.varTypes[a]
         if not(varType in acceptable):
             eh.varExistNotNumerical(loc)
         else:
-            g.vars.remove(a)
-            g.varNames.remove(a)
-    g.vars.append([varName, 'numerical', 0.0])
+            g.varTypes.pop(a)
+            g.varValues.pop(a)
+            g.varNames.pop(a)
+    g.varTypes.append('numerical')
     g.varNames.append(varName)
-
+    g.varValues.append(0.0)
     varsFound = parser.parse(expression).variables()
     varDict = {}
-
     for x in varsFound:
         try:
             a = g.varNames.index(x)
         except:
             eh.varDoesntExist(loc)
-        if not((g.vars[a])[1] in acceptable):
+        if not(g.varTypes[a] in acceptable):
             eh.varInWrongContext(loc)
-        varDict[x] = (g.vars[a])[2]
-
+        varDict[x] = g.varValues[a]
     newValue = parser.parse(expression).evaluate(varDict)
-    if type(newValue) == 'Float': (g.vars[len(g.vars) - 1])[1] = 'float'
-    if type(newValue) == 'Int': (g.vars[len(g.vars) - 1])[1] = 'integer'
-    if not(g.vars[len(g.vars) - 1])[1] in acceptable:
+    if type(newValue) == type(0.1): (g.varTypes[len(g.varTypes) - 1]) = 'float'
+    if type(newValue) == type(1): (g.varTypes[len(g.varTypes) - 1]) = 'integer'
+    if not(g.varTypes[len(g.varTypes) - 1]) in acceptable:
         eh.declarationNonNumerical(loc)
-    (g.vars[len(g.vars) - 1])[2] = newValue
-    for x in g.vars:
-        print(x)
+    g.varValues[len(g.varValues) - 1] = newValue

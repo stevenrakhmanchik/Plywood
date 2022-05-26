@@ -43,3 +43,16 @@ def varDoesntExist(loc):
 def declarationNonNumerical(loc):   #this shouldn't really ever happen
     print("Pinewood Error: declarationNonNumerical in line " + str(loc) + "\nGot non-numerical result from numerical declaration")
     quit(0)
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# Output Errors:
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+def outStatementNotTwoParts(loc):
+    print("Pinewood Error: outStatementNotTwoParts in line " + str(loc) + "\nOut statement must consist of two sections separated by a |")
+    quit(0)
+def outFormatNotMatch(loc):
+    print("Pinewood Error: outFormatNotMatch in line " + str(loc) + "\nVariable and format portions must have same number of arguments")
+    quit(0)
+def wrongTypeInFormat(loc):
+    print("Pinewood Error: wrongTypeInFormat in line " + str(loc) + "\nType in formatting section isn't the type of the variable given")
+    quit(0)

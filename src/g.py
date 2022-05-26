@@ -1,10 +1,12 @@
 from py_expression_eval import Parser
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-global vars
+global varValues
+global varTypes
 global varNames
 global lines
 global parser
-vars = []
 varNames = []
 lines = []
+varTypes = []
+varValues = []
 parser = Parser()
