@@ -15,7 +15,7 @@ from py_expression_eval import Parser
 #         eh.wrongTypeInFormat(loc)
 #     print(var, end = '')
 
-def escape_split(str_to_escape, delimiter='$', escape='\'):
+def escape_split(str_to_escape, delimiter='$', escape='\\'):
     if len(delimiter) > 1 or len(escape) > 1:
         raise ValueError("Either delimiter or escape must be an one char value")
     token = ''
@@ -46,7 +46,7 @@ def escape_split(str_to_escape, delimiter='$', escape='\'):
 def out(line):
     loc = eh.getLine("out" + line) + 1
     varMatch = line.strip()
-    varMatch = list(escape_split(varMatch, '|'))
+    varMatch = list(escape_split(varMatch, '$'))
     parser = Parser()
     for x in range(0,len(varMatch)):
         var = varMatch[x]

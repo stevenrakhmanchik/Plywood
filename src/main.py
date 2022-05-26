@@ -1,8 +1,9 @@
-#    ___ _                                    _
-#   / _ (_)_ __   _____      _____   ___   __| |
-#  / /_)/ | '_ \ / _ \ \ /\ / / _ \ / _ \ / _` |
-# / ___/| | | | |  __/\ V  V / (_) | (_) | (_| |
-# \/    |_|_| |_|\___| \_/\_/ \___/ \___/ \__,_|
+#    ___ _                               _
+#   / _ \ |_   ___      _____   ___   __| |
+#  / /_)/ | | | \ \ /\ / / _ \ / _ \ / _` |
+# / ___/| | |_| |\ V  V / (_) | (_) | (_| |
+# \/    |_|\__, | \_/\_/ \___/ \___/ \__,_|
+#          |___/
 # Steven Rakhmanchik (C) 2022 Pinewood Programming Language
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -17,12 +18,10 @@ def mainLoop(woodFile):
     for line in g.lines:
         line_lex = line.split(' ')
         if '->' in line:
-            declare.declareNum(line)
+            declare.declare(line)
         if line_lex[0] == 'out':
             line = line[3:len(line)]
             output.out(line)
-        if '=>' in line:
-            declar.declareNonNum(line)
 
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––

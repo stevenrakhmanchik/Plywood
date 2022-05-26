@@ -1,8 +1,9 @@
-#    ___ _                                    _
-#   / _ (_)_ __   _____      _____   ___   __| |
-#  / /_)/ | '_ \ / _ \ \ /\ / / _ \ / _ \ / _` |
-# / ___/| | | | |  __/\ V  V / (_) | (_) | (_| |
-# \/    |_|_| |_|\___| \_/\_/ \___/ \___/ \__,_|
+#    ___ _                               _
+#   / _ \ |_   ___      _____   ___   __| |
+#  / /_)/ | | | \ \ /\ / / _ \ / _ \ / _` |
+# / ___/| | |_| |\ V  V / (_) | (_) | (_| |
+# \/    |_|\__, | \_/\_/ \___/ \___/ \__,_|
+#          |___/
 # Steven Rakhmanchik (C) 2022 Pinewood Programming Language
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 import g
@@ -45,14 +46,5 @@ def declarationNonNumerical(loc):   #this shouldn't really ever happen
     quit(0)
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# Output Errors:
+# IO Errors:
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-def outStatementNotTwoParts(loc):
-    print("Pinewood Error: outStatementNotTwoParts in line " + str(loc) + "\nOut statement must consist of two sections separated by a |")
-    quit(0)
-def outFormatNotMatch(loc):
-    print("Pinewood Error: outFormatNotMatch in line " + str(loc) + "\nVariable and format portions must have same number of arguments")
-    quit(0)
-def wrongTypeInFormat(loc):
-    print("Pinewood Error: wrongTypeInFormat in line " + str(loc) + "\nType in formatting section isn't the type of the variable given")
-    quit(0)
