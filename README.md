@@ -40,19 +40,21 @@ Contact info is in github bio.
 ## Run: python3 main.py testcode/fibonacci.wood
 ## Steven Rakhmanchik 2022
 '''
-0 -> A
-1 -> B
-1 -> C
-OUT 0 $ ', '
 
-LBL LOOP
+   0 -> A
+   1 -> B
+   1 -> C
+   OUT 0 $ ', '
 
-A -> C
-B -> A
-C + B -> B
-OUT B $ ', '
-B -> A
-C -> B
+   LBL LOOP
+
+   A -> C
+   B -> A
+   C + B -> B
+   OUT B $ ', '
+   B -> A
+   C -> B
    
-GOTO LOOP
+   GOTO LOOP
+   
 '''
