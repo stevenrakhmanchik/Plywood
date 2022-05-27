@@ -6,6 +6,8 @@
 
 This is quite obviously a work in progress :)
 
+<bold>Need someone to help design a logo for the programming language so that we can be more "official"</bold>
+
 ### Goals:
 
 The goal of Plywood is to give the user utmost freedom of structuring code in any way neccessary. This will be done via the use of a system of label and goto syntax that will allow going from one spot in the program to another.
@@ -16,7 +18,7 @@ The end product will be written completely in C or will be a Cython compiled ver
 
 I am currently looking for people to collaborate with on:
 
-- Creating syntax highlighting and grammar rules via Tree-sitter for code editors to recognize Plywood (High Priority)
+- Creating syntax highlighting and grammar rules via Tree-sitter for code editors to recognize Plywood <bold>(High Priority)</bold>
 - Writing documentation and wiki
 - Implementing more syntax features
 - Developing libraries and a package system
