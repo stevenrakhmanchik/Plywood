@@ -32,8 +32,8 @@ Contact info is in github bio.
 - [ ] Implement Logic Arithmetic
 - [ ] Implement if/then
 - [X] Implement labels and goto to enable looping and recursive code when paired with if/then
-- Adding more soon
-- At some point: Try solving USACO Bronze problems with Plywood to see how it goes
+- [ ] Adding more soon
+- [ ] At some point: Try solving USACO Bronze problems with Plywood to see how it goes
 
 ## Sample Code Snippets:
 
