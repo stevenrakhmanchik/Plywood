@@ -48,7 +48,7 @@ Plywood program that spews out an infinte sequence of fibonacci numbers until it
    1 -> C
    OUT 0 $ ', '
 
-   LBL LOOP
+   LBL loop
 
    A -> C
    B -> A
@@ -57,5 +57,5 @@ Plywood program that spews out an infinte sequence of fibonacci numbers until it
    B -> A
    C -> B
    
-   GOTO LOOP 
+   GOTO loop 
 ```
