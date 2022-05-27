@@ -39,20 +39,20 @@ Contact info is in github bio.
 ## Plywood program that spews out an infinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal so be careful lol)
 ## Run: python3 main.py testcode/fibonacci.wood
 ## Steven Rakhmanchik 2022
+'''
+0 -> A
+1 -> B
+1 -> C
+OUT 0 $ ', '
 
-   0 -> A
-   1 -> B
-   1 -> C
+LBL LOOP
 
-   OUT 0 $ ', '
-
-   LBL LOOP
-
-   A -> C
-   B -> A
-   C + B -> B
-   OUT B $ ', '
-   B -> A
-   C -> B
+A -> C
+B -> A
+C + B -> B
+OUT B $ ', '
+B -> A
+C -> B
    
-   GOTO LOOP
+GOTO LOOP
+'''
