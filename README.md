@@ -39,7 +39,12 @@ Contact info is in github bio.
 ## Plywood program that spews out an infinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal so be careful lol)
 ## Run: python3 main.py testcode/fibonacci.wood
 ## Steven Rakhmanchik 2022
+
+Plywood program that spews out an infinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal given if/then/else haven't been implemented yet so be careful) you can stop the program as you normally would with CONTROL + C
 ```
+# Clone and run the following command from inside the /src directory to run this program:
+# $  python3 main.py testcode/fibonacci.wood
+
    0 -> A
    1 -> B
    1 -> C
