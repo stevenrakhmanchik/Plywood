@@ -5,8 +5,7 @@
 "hello world" -> string
 "\n" -> newline
 5 -> number
-out "Printing String: " $ string $ newline
+OUT "Printing String: " $ string $ newline
 string + number -> anotherString
-
-out "Sum Of Strings As Variable: " $ anotherString $ newline
-out "Sum Of Strings As Output: " $ string $ number $ newline
+OUT "Sum Of Strings As Variable: " $ anotherString $ newline
+OUT "Sum Of Strings As Output: " $ string $ number $ newline

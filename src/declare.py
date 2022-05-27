@@ -7,7 +7,8 @@ def declare(line):
     acceptable = ('integer','float','numerical','string','nulltype')
     banned = ()
     line_lex = line.split('->')
-    loc = eh.getLine(line) + 1
+    #loc = eh.getLine(line) + 1
+    loc = g.lineNumber
     expression = line_lex[0]
     varName = line_lex[1].strip()
     if len(line_lex) > 2:

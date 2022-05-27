@@ -4,7 +4,7 @@
 # / ___/| | |_| |\ V  V / (_) | (_) | (_| |
 # \/    |_|\__, | \_/\_/ \___/ \___/ \__,_|
 #          |___/
-# Steven Rakhmanchik (C) 2022 Pinewood Programming Language
+# Steven Rakhmanchik (C) 2022 Plywood Programming Language
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 import g
 
@@ -30,7 +30,7 @@ def multiDeclare(loc):
     print("Pinewood Error: multiDeclare in line " + str(loc) + "\nMore than one declaration was made in a line")
     quit(0)
 def invalidVarName(loc):
-    print("Pinewood Error: invalidVarName in line " + str(loc) + "\nAttempted to create invalid variable name")
+    print("Pinewood Error: invalidVarName in line " + str(loc) + "\nVariable name must be alphabetical")
     quit(0)
 def varExistNotNumerical(loc):
     print("Pinewood Error: varExistNotNumerical in line " + str(loc) + "\nAttempted to set numerical to non-numerical")
@@ -46,5 +46,24 @@ def declarationNonNumerical(loc):   #this shouldn't really ever happen
     quit(0)
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# IO Errors:
+# Label and Goto Errors:
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+def invalidLblName(loc):
+    print("Pinewood Error: invalidLblName in line " + str(loc) + "\nLbl name must be alphabetical")
+    quit(0)
+def invalidGotoDest(loc):
+    print("Pinewood Error: invalidGotoDest in line " + str(loc) + "\nGoto destination must be alphabetical")
+    quit(0)
+def gotoWithNoDest(loc):
+    print("Pinewood Error: gotoWithNoDest in line " + str(loc) + "\nGoto has no cooresponding label")
+    quit(0)
+def lblTooManyArgs(loc):
+    print("Pinewood Error: lblTooManyArgs in line " + str(loc) + "\nLabel only takes one argument")
+    quit(0)
+def gotoTooManyArgs(loc):
+    print("Pinewood Error: gotoTooManyArgs in line " + str(loc) + "\nGoto only takes one argument")
+    quit(0)
+
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# Label and Goto Errors:
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
