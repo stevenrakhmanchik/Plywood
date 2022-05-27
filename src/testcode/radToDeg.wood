@@ -1,8 +1,9 @@
-## Plywood Program to convert radians to degrees and print the output
+## Plywood program that converts radians to degrees and prints the output, doing the printing in various ways
 ## Run: python3 main.py testcode/radToDeg.wood
 ## Steven Rakhmanchik 2022
 
 PI/6 -> radians
+
 OUT "Radians: " $ radians $ "\n"
 0 -> degrees
 radians * 180 * PI -> degrees

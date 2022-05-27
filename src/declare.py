@@ -33,10 +33,8 @@ def declare(line):
     varDict = {}
     flagString = False
     for x in varsFound:
-        try:
-            a = g.varNames.index(x)
-        except:
-            eh.varDoesntExist(loc)
+        try: a = g.varNames.index(x)
+        except: eh.varDoesntExist(loc)
         if not(g.varTypes[a] in acceptable):
             eh.varInWrongContext(loc)
         if g.varTypes[a] == 'string': flagString = True

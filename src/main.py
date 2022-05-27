@@ -7,6 +7,7 @@
 # Steven Rakhmanchik (C) 2022 Plywood Programming Language
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
+import time
 import sys
 import os.path
 import errorhandler as eh
@@ -24,7 +25,7 @@ def mainLoop(woodFile):
             label.lbl(line_lex[1])
 
     g.lineNumber = -1
-    while g.lineNumber != len(g.lines):
+    while g.lineNumber != len(g.lines)-1:
         g.lineNumber+=1
         line = g.lines[g.lineNumber]
         line_lex = line.strip().split(' ')
