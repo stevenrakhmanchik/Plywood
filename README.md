@@ -18,9 +18,9 @@ I am currently looking for people to collaborate with on:
 
 - Creating syntax highlighting and grammar rules via Tree-sitter for code editors to recognize Plywood (High Priority)
 - Writing documentation and wiki
-- Implementing syntax features
+- Implementing more syntax features
 - Developing libraries and a package system
-- Literally anything else
+- Literally anything else you want to suggest :)
  
 Contact info is in github bio.
 
@@ -30,5 +30,5 @@ Contact info is in github bio.
 - [X] Implement Output
 - [ ] Implement Logic Arithmetic
 - [ ] Implement if/then
-- [ ] Implement labels and goto to enable looping and recursive code when paired with if/then
+- [X] Implement labels and goto to enable looping and recursive code when paired with if/then
 - Adding more soon
