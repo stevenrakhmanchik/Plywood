@@ -6,13 +6,13 @@
 
 This is quite obviously a work in progress :)
 
-### Goals:
+## Goals:
 
 The goal of Plywood is to give the user utmost freedom of structuring code in any way neccessary. This will be done via the use of a system of label and goto syntax that will allow going from one spot in the program to another.
 
 The end product will be written completely in C or will be a Cython compiled version of the Python source code of the language.
 
-### Join In!
+## Join In!
 
 I am currently looking for people to collaborate with on:
 
@@ -25,7 +25,7 @@ I am currently looking for people to collaborate with on:
  
 Contact info is in github bio.
 
-### To Do:
+## To Do:
 
 - [X] Implement Numeric Arithmetic
 - [X] Implement Output
@@ -34,7 +34,7 @@ Contact info is in github bio.
 - [X] Implement labels and goto to enable looping and recursive code when paired with if/then
 - Adding more soon
 
-### Sample Code Snippets:
+## Sample Code Snippets:
 
 #### Fibonacci:
 Plywood program that spews out an infinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal given if/then/else haven't been implemented yet so be careful) you can stop the program as you normally would with CONTROL + C
