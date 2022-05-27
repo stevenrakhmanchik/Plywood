@@ -6,8 +6,6 @@
 
 This is quite obviously a work in progress :)
 
-<bold>Need someone to help design a logo for the programming language so that we can be more "official"</bold>
-
 ### Goals:
 
 The goal of Plywood is to give the user utmost freedom of structuring code in any way neccessary. This will be done via the use of a system of label and goto syntax that will allow going from one spot in the program to another.
@@ -23,6 +21,7 @@ I am currently looking for people to collaborate with on:
 - Implementing more syntax features
 - Developing libraries and a package system
 - Literally anything else you want to suggest :)
+- Need someone to help design a logo for the programming language so that we can be more "official" (blender, photoshop, or another tool?)
  
 Contact info is in github bio.
 
