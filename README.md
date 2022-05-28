@@ -49,19 +49,34 @@ Plywood program that spews out an infinte sequence of fibonacci numbers until it
 # Clone the code and run the following command from inside the /src directory to test this program:
 # python3 main.py testcode/fibonacci.wood
 
-   0 -> A
-   1 -> B
-   1 -> C
-   OUT 0 $ ', '
+10 -> n
+', ' -> comma
+'\n' -> newline
+0 -> A
+1 -> B
+1 -> C
+1 -> i
+OUT 0 $ comma
+LBL fibonacciLoop
 
-   LBL loop
+  IF
+    i == (n - 1)
+  THEN
+    A -> C
+    B -> A
+    C + B -> B
+    OUT B $ newline
+    GOTO exitFibonacciLoop
+  ENDIF
 
-   A -> C
-   B -> A
-   C + B -> B
-   OUT B $ ', '
-   B -> A
-   C -> B
-   
-   GOTO loop 
+  A -> C
+  B -> A
+  C + B -> B
+  OUT B $ comma
+  B -> A
+  C -> B
+  i + 1 -> i
+  GOTO fibonacciLoop
+
+LBL exitFibonacciLoop
 ```
