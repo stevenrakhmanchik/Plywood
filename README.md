@@ -29,10 +29,16 @@ Contact info is in github bio.
 
 - [X] Implement Numeric Arithmetic
 - [X] Implement Output
-- [ ] Implement Logic Arithmetic
-- [ ] Implement if/then
+- [X] Implement Logic Arithmetic
+- [X] Implement if/then
 - [X] Implement labels and goto to enable looping and recursive code when paired with if/then
-- [ ] Adding more soon
+- [ ] Implement lists
+- [ ] Implement importing additional modules and libraries written in Plywood
+- [ ] Allow multiple lines of code to be put on one line separated by a vertical line delimiter "|"
+- [ ] Build native Plywood library to create matrixes (will use lists to do this)
+
+- [ ] Create chess engine using matrixes made in plywood (???)
+
 - [ ] At some point: Try solving USACO Bronze problems with Plywood to see how it goes
 
 ## Sample Code Snippets:
