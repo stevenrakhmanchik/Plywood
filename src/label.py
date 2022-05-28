@@ -7,9 +7,6 @@ def lbl(line):
     line = line.strip()
     g.lbls[line] = loc
 
-
-
-
 def goto(line):
     #loc = eh.getLine("GOTO" + line)
     loc = g.lineNumber + 1
@@ -19,4 +16,5 @@ def goto(line):
     if not(line in list(g.lbls.keys())):
         eh.gotoWithNoDest(loc)
     g.lineNumber = int(g.lbls[line])
-    return g.lineNumber
+    g.nestedIf = 0
+    return g.lineNumber - 1

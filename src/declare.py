@@ -29,7 +29,8 @@ def declare(line):
     g.varTypes.append('nulltype')
     g.varNames.append(varName)
     g.varValues.append(0.0)
-    varsFound = parser.parse(expression).variables()
+    var = parser.parse(expression)
+    varsFound = var.variables()
     varDict = {}
     flagString = False
     for x in varsFound:
@@ -43,14 +44,14 @@ def declare(line):
             continue
         varDict[x] = g.varValues[a]
     try:
-        newValue = parser.parse(expression).evaluate(varDict)
+        newValue = var.evaluate(varDict)
     except TypeError:
         if flagString == True:
             varDictTemp = {}
-            for var in varDict:
-                varDictTemp[var] = str(varDict[var])
+            for varEntry in varDict:
+                varDictTemp[varEntry] = str(varDict[varEntry])
             varDict = varDictTemp
-            newValue = parser.parse(expression).evaluate(varDict)
+            newValue = var.evaluate(varDict)
     if type(newValue) == type(0.1): (g.varTypes[len(g.varTypes) - 1]) = 'float'
     if type(newValue) == type(1): (g.varTypes[len(g.varTypes) - 1]) = 'integer'
     if type(newValue) == type(""): (g.varTypes[len(g.varTypes) - 1]) = 'string'

@@ -42,27 +42,31 @@ def escape_split(str_to_escape, delimiter='$', escape='\\'):
             token += c
     yield token
 
+def calculate(var,loc):
+    parser = Parser()
+    try:
+        var = parser.parse(var)
+        varsFound = var.variables()
+    except:
+        eh.varDoesntExist(loc)
+    varDict = {}
+    for x in varsFound:
+        try:
+            a = g.varNames.index(x)
+        except:
+            eh.varDoesntExist(loc)
+        varDict[x] = g.varValues[a]
+    newValue = var.evaluate(varDict)
+    return(newValue)
 
 def out(line):
-    #loc = eh.getLine("OUT" + line) + 1
     loc = g.lineNumber + 1
     varMatch = line.strip()
     varMatch = list(escape_split(varMatch, '$'))
     parser = Parser()
     for x in range(0,len(varMatch)):
         var = varMatch[x]
-        try:
-            varsFound = parser.parse(var).variables()
-        except:
-            eh.varDoesntExist(loc)
-        varDict = {}
-        for x in varsFound:
-            try:
-                a = g.varNames.index(x)
-            except:
-                eh.varDoesntExist(loc)
-            varDict[x] = g.varValues[a]
-        newValue = parser.parse(var).evaluate(varDict)
+        newValue = calculate(var, loc)
         print(newValue, end = '')
 
 def inp(line):

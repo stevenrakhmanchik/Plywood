@@ -8,62 +8,83 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 import g
 
-def getLine(line):
-    return(g.lines.index(line))
+def getLine(line):                  # DEPRECATED was used for getting line number by matching code
+    return(g.lines.index(line))     # Doesn't work if two lines have the same code (will use the first)
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # WoodFile Errors:
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 def noFileArg():
-    print("Pinewood Error: noFileArg\nNo file was passed as an argument")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"noFileArg"+g.WHITE+"\nNo file was passed as an argument"+g.RESET)
     quit(0)
 def noWoodFileArg():
-    print("Pinewood Error: noWoodFileArg\nNo \'.wood\' file was passed as an argument")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"noWoodFileArg"+g.WHITE+"\nNo \'.wood\' file was passed as an argument")
     quit(0)
 def noWoodFileExist():
-    print("Pinewood Error: noWoodFileExist\nGiven \'.wood\' file doesn't exist")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"noWoodFileExist"+g.WHITE+"\nGiven \'.wood\' file doesn't exist")
     quit(0)
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # Declaration Errors:
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 def multiDeclare(loc):
-    print("Pinewood Error: multiDeclare in line " + str(loc) + "\nMore than one declaration was made in a line")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"multiDeclare"+g.WHITE+" in line " + str(loc) + "\nMore than one declaration was made in a line")
     quit(0)
 def invalidVarName(loc):
-    print("Pinewood Error: invalidVarName in line " + str(loc) + "\nVariable name must be alphabetical")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"invalidVarName "+g.WHITE+"in line " + str(loc) + "\nVariable name must be alphabetical")
     quit(0)
 def varExistNotNumerical(loc):
-    print("Pinewood Error: varExistNotNumerical in line " + str(loc) + "\nAttempted to set numerical to non-numerical")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"varExistNotNumerical "+g.WHITE+"in line " + str(loc) + "\nAttempted to set numerical to non-numerical")
     quit(0)
 def varInWrongContext(loc):
-    print("Pinewood Error: varInWrongContext in line " + str(loc) + "\nAttempted numerical operation with non-numerical variable")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"varInWrongContext "+g.WHITE+"in line " + str(loc) + "\nAttempted numerical operation with non-numerical variable")
     quit(0)
 def varDoesntExist(loc):
-    print("Pinewood Error: varDoesntExist in line " + str(loc) + "\nAttempted to use non-existant variable")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"varDoesntExist "+g.WHITE+"in line " + str(loc) + "\nAttempted to use non-existant variable")
     quit(0)
 def declarationNonNumerical(loc):   #this shouldn't really ever happen
-    print("Pinewood Error: declarationNonNumerical in line " + str(loc) + "\nGot non-numerical result from numerical declaration")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"declarationNonNumerical "+g.WHITE+"in line " + str(loc) + "\nGot non-numerical result from numerical declaration")
     quit(0)
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # Label and Goto Errors:
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 def invalidLblName(loc):
-    print("Pinewood Error: invalidLblName in line " + str(loc) + "\nLbl name must be alphabetical")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"invalidLblName "+g.WHITE+"in line " + str(loc) + "\nLbl name must be alphabetical")
     quit(0)
 def invalidGotoDest(loc):
-    print("Pinewood Error: invalidGotoDest in line " + str(loc) + "\nGoto destination must be alphabetical")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"invalidGotoDest "+g.WHITE+"in line " + str(loc) + "\nGoto destination must be alphabetical")
     quit(0)
 def gotoWithNoDest(loc):
-    print("Pinewood Error: gotoWithNoDest in line " + str(loc) + "\nGoto has no cooresponding label")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"gotoWithNoDest "+g.WHITE+"in line " + str(loc) + "\nGoto has no cooresponding label")
     quit(0)
 def lblTooManyArgs(loc):
-    print("Pinewood Error: lblTooManyArgs in line " + str(loc) + "\nLabel only takes one argument")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"lblTooManyArgs "+g.WHITE+"in line " + str(loc) + "\nLabel only takes one argument")
     quit(0)
 def gotoTooManyArgs(loc):
-    print("Pinewood Error: gotoTooManyArgs in line " + str(loc) + "\nGoto only takes one argument")
+    print(g.RED+"Pinewood Error: "+g.CYAN+"gotoTooManyArgs "+g.WHITE+"in line " + str(loc) + "\nGoto only takes one argument")
     quit(0)
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# Label and Goto Errors:
+# If, Then, EndIf Errors:
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+def ifDoesntTakeArgs(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"ifDoesntTakeArgs "+g.WHITE+"in line " + str(loc) + "\nIf doesn't take any arguments")
+    quit(0)
+def ifStmtInBadPlace(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"ifStmtInBadPlace "+g.WHITE+"in line " + str(loc) + "\nIf statment cannot be between another if/then declaration")
+    quit(0)
+def thenDoesntTakeArgs(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"thenDoesntTakeArgs "+g.WHITE+"in line " + str(loc) + "\nThen doesn't take any arguments")
+    quit(0)
+def endifDoesntTakeArgs(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"endifDoesntTakeArgs "+g.WHITE+"in line " + str(loc) + "\nEndif doesn't take any arguments")
+    quit(0)
+def elseDoesntTakeArgs(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"elseDoesntTakeArgs "+g.WHITE+"in line " + str(loc) + "\nElse doesn't take any arguments")
+    quit(0)
+def endifWithNoIf(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"endifWithNoIf "+g.WHITE+"in line " + str(loc) + "\nEndif is only used at the end of an if clause")
+    quit(0)
+def ifCondInvalid(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"ifCondInvalid "+g.WHITE+"in line " + str(loc) + "\nInvalid condition in between if and then")
+    quit(0)

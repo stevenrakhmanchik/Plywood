@@ -1,4 +1,4 @@
-## Plywood program that spews out an infinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal so be careful lol)
+## Plywood program that pri an intsnfinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal, be careful)
 ## Run: python3 main.py testcode/fibonacci.wood
 ## Steven Rakhmanchik 2022
 
@@ -8,7 +8,7 @@
 
 OUT 0 $ ', '
 
-LBL LOOP
+LBL fibonacciLoop
 
 A -> C
 B -> A
@@ -17,4 +17,4 @@ OUT B $ ', '
 B -> A
 C -> B
 
-GOTO LOOP
+GOTO fibonacciLoop

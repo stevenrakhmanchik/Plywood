@@ -1,0 +1,28 @@
+## Plywood program that tests various if/then/else/endif and nested structures
+## Run: python3 main.py testcode/ifThenTesting.wood
+## Steven Rakhmanchik 2022
+
+'\n' -> newline
+'True' -> flag
+
+OUT "[0] Entering First If" $ newline
+IF
+flag == "True"
+THEN
+OUT "[1] First If Worked" $ newline
+
+IF
+1 + 1 == 3
+THEN
+OUT "[2] Nested If Worked" $ newline
+ELSE
+OUT "[2] Nested Else Worked" $ newline
+ENDIF
+
+OUT "[1] Exited Nested If" $ newline
+
+ELSE
+OUT "[ELSE1] First Else Worked" $ newline
+ENDIF
+
+OUT "[0] Exited First If" $ newline
