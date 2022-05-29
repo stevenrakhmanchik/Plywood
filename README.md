@@ -44,7 +44,7 @@ Contact info is in github bio.
 ## Sample Code Snippets:
 
 #### Fibonacci:
-Plywood program that spews out an infinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal given if/then/else haven't been implemented yet so be careful) you can stop the program as you normally would with CONTROL + C
+Plywood program that spews out an fibonacci numbers until a certain number "n"
 ```
 # Clone the code and run the following command from inside the /src directory to test this program:
 # python3 main.py testcode/fibonacci2.wood
