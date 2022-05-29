@@ -63,6 +63,12 @@ def lblTooManyArgs(loc):
 def gotoTooManyArgs(loc):
     print(g.RED+"Pinewood Error: "+g.CYAN+"gotoTooManyArgs "+g.WHITE+"in line " + str(loc) + "\nGoto only takes one argument")
     quit(0)
+def lblMustBeAlone(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"lblMustBeAlone "+g.WHITE+"in line " + str(loc) + "\nLbl must be on its own line")
+    quit(0)
+def gotoMustBeAlone(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"gotoMustBeAlone "+g.WHITE+"in line " + str(loc) + "\nGoto must be on its own line")
+    quit(0)
 
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # If, Then, EndIf Errors:
@@ -87,4 +93,13 @@ def endifWithNoIf(loc):
     quit(0)
 def ifCondInvalid(loc):
     print(g.RED+"Pinewood Error: "+g.CYAN+"ifCondInvalid "+g.WHITE+"in line " + str(loc) + "\nInvalid condition in between if and then")
+    quit(0)
+def lineBreakInCond(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"lineBreakInCond "+g.WHITE+"in line " + str(loc) + "\nCannot have line breaks between conditions of an if")
+    quit(0)
+def ifMustBeAlone(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"ifMustBeAlone "+g.WHITE+"in line " + str(loc) + "\nIf must be on its own line")
+    quit(0)
+def thenMustBeAlone(loc):
+    print(g.RED+"Pinewood Error: "+g.CYAN+"thenMustBeAlone "+g.WHITE+"in line " + str(loc) + "\nThen must be on its own line")
     quit(0)

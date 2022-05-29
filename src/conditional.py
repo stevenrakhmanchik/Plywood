@@ -19,12 +19,14 @@ def calculate(var,loc):
     newValue = var.evaluate(varDict)
     return(newValue)
 
-def ifStmt(line):
+def ifStmt():
     loc = g.lineNumber + 1
     ifCondFull = ''
+    line = (g.lines[g.lineNumber])[0]
     line_lex = line.split(' ')
     while line_lex[0] != 'THEN':
-        line = (g.lines[g.lineNumber]).strip()
+        lineList = (g.lines[g.lineNumber])[0]
+        line = ((g.lines[g.lineNumber])[0]).strip()
         line_lex = line.split(' ')
         if line_lex[0] == "IF":
             if g.ifStmtsFlag == True: eh.ifStmtInBadPlace(g.lineNumber + 1)

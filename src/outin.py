@@ -70,6 +70,5 @@ def out(line):
         print(newValue, end = '')
 
 def inp(line):
-    #loc = eh.getLine("IN" + line) + 1
     loc = g.lineNumber + 1
     return 0
