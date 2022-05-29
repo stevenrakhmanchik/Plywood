@@ -34,7 +34,7 @@ Contact info is in github bio.
 - [X] Implement labels and goto to enable looping and recursive code when paired with if/then
 - [ ] Implement lists
 - [ ] Implement importing additional modules and libraries written in Plywood
-- [ ] Allow multiple lines of code to be put on one line separated by a vertical line delimiter "|"
+- [X] Allow multiple lines of code to be put on one line separated by a vertical line delimiter ";"
 - [ ] Build native Plywood library to create matrixes (will use lists to do this)
 
 - [ ] Create chess engine using matrixes made in plywood (???)
@@ -47,36 +47,27 @@ Contact info is in github bio.
 Plywood program that spews out an infinte sequence of fibonacci numbers until it is terminated (this will clog up ur terminal given if/then/else haven't been implemented yet so be careful) you can stop the program as you normally would with CONTROL + C
 ```
 # Clone the code and run the following command from inside the /src directory to test this program:
-# python3 main.py testcode/fibonacci.wood
+# python3 main.py testcode/fibonacci2.wood
 
 10 -> n
-', ' -> comma
-'\n' -> newline
-0 -> A
-1 -> B
-1 -> C
-1 -> i
-OUT 0 $ comma
+0 -> A; 1 -> B; 1 -> C; 1 -> i;
+OUT 0 $ ' '
 LBL fibonacciLoop
+  GOTO helper
+  LBL helperExit
 
   IF
-    i == (n - 1)
+  i == (n - 1)
   THEN
-    A -> C
-    B -> A
-    C + B -> B
-    OUT B $ newline
     GOTO exitFibonacciLoop
   ENDIF
+  B -> A; C -> B; i + 1 -> i
+GOTO fibonacciLoop
 
-  A -> C
-  B -> A
-  C + B -> B
-  OUT B $ comma
-  B -> A
-  C -> B
-  i + 1 -> i
-  GOTO fibonacciLoop
+  LBL helper
+    A -> C; B -> A; C + B -> B; OUT B $ ' '
+  GOTO helperExit
 
-LBL exitFibonacciLoop
+  LBL exitFibonacciLoop
+OUT '\n'
 ```
