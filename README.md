@@ -46,7 +46,7 @@ Contact info is in github bio.
 #### Fibonacci:
 Plywood program that spews out an fibonacci numbers until a certain number "n"
 ```
-# Clone the code and run the following command from inside the /src directory to test this program:
+# Clone the code and run the following command from inside the /src directory:
 # python3 main.py testcode/fibonacci2.wood
 
 10 -> n
