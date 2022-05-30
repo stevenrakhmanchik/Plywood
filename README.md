@@ -12,19 +12,6 @@ The goal of Plywood is to give the user utmost freedom of structuring code in an
 
 The end product will be written completely in C or will be a Cython compiled version of the Python source code of the language.
 
-## Join In!
-
-I am currently looking for people to collaborate with on:
-
-- Creating syntax highlighting and grammar rules via Tree-sitter for code editors to recognize Plywood <bold>(High Priority)</bold>
-- Writing documentation and wiki
-- Implementing more syntax features
-- Developing libraries and a package system
-- Literally anything else you want to suggest :)
-- Need someone to help design a logo for the programming language so that we can be more "official" (blender, photoshop, or another tool?)
- 
-Contact info is in github bio.
-
 ## To Do:
 
 - [X] Implement Numeric Arithmetic
@@ -71,6 +58,22 @@ GOTO fibonacciLoop
   LBL exitFibonacciLoop
 OUT '\n'
 ```
+## Join In!
+
+I am currently looking for people to collaborate with on:
+
+- Creating syntax highlighting and grammar rules via Tree-sitter for code editors to recognize Plywood <bold>(High Priority)</bold>
+- Writing documentation and wiki
+- Implementing more syntax features
+- Developing libraries and a package system
+- Literally anything else you want to suggest :)
+- Need someone to help design a logo for the programming language so that we can be more "official" (blender, photoshop, or another tool?)
+ 
+Contact info is in my github bio.
+
 ## Contributors:
 
--> Steven Rakhmanchik
+#### Main Code Developers:
+
+
+#### 
