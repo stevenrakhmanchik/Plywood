@@ -28,7 +28,7 @@ The end product will be written completely in C or will be a Cython compiled ver
 
 - [ ] Create chess engine using matrixes made in plywood (???)
 
-- [ ] At some point: Try solving USACO Bronze problems with Plywood to see how it goes
+- [ ] At some point: Try solving USACO problems with Plywood to see how it goes
 
 ## Sample Code Snippets:
 
