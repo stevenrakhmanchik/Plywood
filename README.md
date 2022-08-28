@@ -5,6 +5,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/stevenrakhmanchik/Pinewood-Programming-Language)
 
 This is quite obviously a work in progress :)
+Currently working on the side to finalize some implementations and rework some language syntax before I commit it.
 
 ## Goals:
 
